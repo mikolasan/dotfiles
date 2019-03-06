@@ -1,0 +1,16 @@
+[user]
+	email = nikolay.n@scgames.us
+	name = Nikolay Neupokoev
+[push]
+	default = simple
+[alias]
+	logg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[core]
+	autocrlf = input
+	safecrlf = false
+	editor = vim
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
