@@ -1,7 +1,7 @@
 # For a detailed description on the different options and how to configure them,
 # refer to the user guide: https://github.com/talal/bonclay/blob/master/doc/guide.md
 backup:
-  overwrite: false
+  overwrite: true
 
 restore:
   overwrite: true
@@ -15,6 +15,7 @@ spec:
   ~/.tmux.conf: .tmux.conf
   ~/.config/ranger: ranger
   ~/.profile: .profile
+  ~/.zprofile: .zprofile
   ~/.zshrc: .zshrc
   ~/.bashrc: .bashrc
 
