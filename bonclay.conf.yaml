@@ -18,4 +18,5 @@ spec:
   ~/.zprofile: .zprofile
   ~/.zshrc: .zshrc
   ~/.bashrc: .bashrc
-
+  ~/.fzf.bash: .fzf.bash
+  ~/.fzf.zsh: .fzf.zsh
