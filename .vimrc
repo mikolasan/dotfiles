@@ -22,6 +22,7 @@ Plugin 'haya14busa/incsearch-easymotion.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'calviken/vim-gdscript3'
+Plugin 'tpope/vim-surround'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -70,7 +71,7 @@ call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
 call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
 
 " Airline
-let g:airline_theme='ubaryd'
+let g:airline_theme='base16'
 let g:powerline_pycmd='py3'
 let g:airline_powerline_fonts = 1
 
