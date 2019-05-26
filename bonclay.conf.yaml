@@ -20,3 +20,6 @@ spec:
   ~/.bashrc: .bashrc
   ~/.fzf.bash: .fzf.bash
   ~/.fzf.zsh: .fzf.zsh
+  ~/.config/bspwm: bspwm
+  ~/.config/polybar: polybar
+  ~/.config/sxhkd: sxhkd
