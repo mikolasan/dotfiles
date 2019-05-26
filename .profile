@@ -47,3 +47,8 @@ if [ -n "$BASH_VERSION" ]; then
 	fi
 fi
 
+export PATH=$PATH:$HOME/.bar
+if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
+  exec startx
+fi
+
