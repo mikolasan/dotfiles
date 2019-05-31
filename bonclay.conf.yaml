@@ -23,4 +23,6 @@ spec:
   ~/.config/bspwm: bspwm
   ~/.config/polybar: polybar
   ~/.config/sxhkd: sxhkd
+  ~/.bar: bar
+  ~/.fehbg: .fehbg
   ~/.xinitrc: .xinitrc
