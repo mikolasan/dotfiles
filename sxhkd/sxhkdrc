@@ -2,9 +2,12 @@
 # wm independent hotkeys
 #
 
+XF86MonBrightness{Down,Up}
+    busctl call org.clightd.clightd /org/clightd/clightd/Backlight org.clightd.clightd.Backlight {Lower,Raise}All "d(bdu)s" 0.2 0 0 0 ""
+
 # terminal emulator
 super + Return
-  gnome-terminal
+    gnome-terminal
 #	urxvt
 
 # program launcher

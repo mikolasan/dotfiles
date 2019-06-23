@@ -83,14 +83,14 @@ font-1 = "Iosevka Nerd Font:pixelsize=13;3"
 cursor-click = pointer
 cursor-scroll = ns-resize
 
-scroll-up = i3wm-wsnext
-scroll-down = i3wm-wsprev
+scroll-up = bspwm-desknext
+scroll-down = bspwm-deskprev
 
 ;== Module Location ========================================================
 
-modules-left = arch workspaces github reddit youtube
-modules-right = cpu pkg memory volume battery backlight network date powermenu
- 
+modules-left = arch workspaces network pkg github
+modules-right = cpu memory battery backlight date powermenu
+
 ;== Modules ========================================================
 
 [module/arch]
@@ -140,40 +140,12 @@ label-active-foreground = ${color.acolor}
 label-urgent-foreground = ${color.curgent}
 label-occupied-foreground = ${color.coccupied}
 
-; [module/google]
-; type = custom/text
-; content = 
-; content-padding = 2
-; content-foreground = ${color.fg-alt}
-; click-left = xdg-open https://www.google.com/ 
-
 [module/github]
 type = custom/text
 content = 
 content-padding = 2
 content-foreground = ${color.fg-alt}
-click-left = xdg-open https://www.github.com/ 
-
-[module/reddit]
-type = custom/text
-content = 
-content-padding = 2
-content-foreground = ${color.fg-alt}
-click-left = xdg-open https://www.reddit.com/
-
-; [module/facebook]
-; type = custom/text
-; content = 
-; content-padding = 2
-; content-foreground = ${color.fg-alt}
-; click-left = xdg-open https://www.facebook.com/
-
-[module/youtube]
-type = custom/text
-content = 
-content-padding = 2
-content-foreground = ${color.fg-alt}
-click-left = xdg-open https://www.youtube.com/
+click-left = firefox https://www.github.com/ 
 
 ;==========================================================
 
@@ -221,9 +193,9 @@ type = internal/memory
 ; Seconds to sleep between updates
 ; Default: 1
 interval = 3
-format = <label><ramp-used>
+format = <label>
 label = ﬙ %mb_used%
-label-padding = 0
+label-padding = 2
 label-background = ${color.shade7}
 ; Only applies if <ramp-used> is used
 ramp-used-0 = ▁
@@ -294,7 +266,8 @@ type = internal/backlight
 
 ; Use the following command to list available cards:
 ; $ ls u1 /sys/class/backlight/
-card = radeon_bl0
+;card = radeon_bl0
+card = samsung
 ; Available tags:
 ;   <label> (default)
 ;   <ramp>
@@ -313,7 +286,7 @@ ramp-2 = 
 ramp-3 = 
 ramp-4 = 
 
-[module/volume]
+[module/alsa]
 type = internal/alsa
 format-volume = <ramp-volume> <label-volume>
 format-volume-padding = 2
@@ -348,7 +321,6 @@ interval = 3.0
 ; @deprecated: Define min width using token specifiers (%downspeed:min% and %upspeed:min%)
 ; Minimum output width of upload/download rate
 ; Default: 3
-udspeed-minwidth = 5
 
 ; Accumulate values from all interfaces
 ; when querying for up/downspeed rate
@@ -407,6 +379,32 @@ type = internal/date
 interval = 30
 label =  %time%
 label-padding = 2
+label-background = ${color.shade3}
+time =  %I:%M %p
+time-alt =  %Y-%m-%d
+
+[module/powermenu]
+type = custom/menu
+label-open = 襤
+label-open-padding = 2
+label-close = 襤
+label-close-padding = 2
+expand-right = false
+label-open-background = ${color.shade2}
+label-open-foreground = ${color.fg}
+label-close-background = ${color.shade2}
+label-close-foreground = ${color.fg}
+menu-0-0 = Reboot
+menu-0-0-padding = 1
+menu-0-0-background = ${color.shade2}
+menu-0-0-exec = systemctl reboot
+menu-0-1 = Shutdown
+menu-0-1-padding = 1
+menu-0-1-background = ${color.shade1}
+menu-0-1-exec = systemctl -i poweroff
+
+;== EOF ========================================================
+adding = 2
 label-background = ${color.shade3}
 time =  %I:%M %p
 time-alt =  %Y-%m-%d
