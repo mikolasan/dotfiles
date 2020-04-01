@@ -23,8 +23,14 @@ function start_agent {
 	/usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
 	chmod 600 "${SSH_ENV}"
 	. "${SSH_ENV}" > /dev/null
-	if [ -f ${HOME}/.ssh/scgames ]; then
-		/usr/bin/ssh-add ${HOME}/.ssh/scgames > /dev/null
+	if [ -f ${HOME}/.ssh/gh_fast ]; then
+		/usr/bin/ssh-add ${HOME}/.ssh/gh_fast > /dev/null
+	fi
+	if [ -f ${HOME}/.ssh/bb_acer ]; then
+		/usr/bin/ssh-add ${HOME}/.ssh/bb_acer > /dev/null
+	fi
+	if [ -f ${HOME}/.ssh/predator ]; then
+		/usr/bin/ssh-add ${HOME}/.ssh/predator > /dev/null
 	fi
 }
 

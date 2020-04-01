@@ -14,8 +14,8 @@ pip3 install --user ranger-fm powerline-status thefuck
 
 vim +PluginInstall +qall
 ./fzf/install
-chsh --shell /bin/zsh $USER
 git config --global user.email "neupokoev.n@gmail.com"
 git config --global user.name "Nikolay Neupokoev"
 git config --global core.editor "vim"
+chsh --shell /bin/zsh $USER
 echo "It is time to LOG OUT and then start fresh"
