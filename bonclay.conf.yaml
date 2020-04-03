@@ -25,3 +25,4 @@ spec:
   ~/.bar: bar
   ~/.fehbg: .fehbg
   ~/.xinitrc: .xinitrc
+  ~/.gitconfig: .gitconfig
