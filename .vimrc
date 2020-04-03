@@ -88,6 +88,7 @@ let g:syntastic_cpp_checkers = []
 let g:syntastic_cpp_config_file = '.vim_syntax'
 let g:syntastic_clang_tidy_config_file = '.vim_syntax'
 let g:syntastic_cpp_check_header = 1
+let g:syntastic_c_checkers = []
 
 filetype plugin indent on
 " show existing tab with 4 spaces width
