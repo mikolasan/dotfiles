@@ -3,6 +3,7 @@
 
 # You will need this
 sudo apt-get install --assume-yes \
+  screen \
   powerline \
   fonts-powerline \
   tmux \
