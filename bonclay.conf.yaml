@@ -26,3 +26,4 @@ spec:
   ~/.fehbg: .fehbg
   ~/.xinitrc: .xinitrc
   ~/.gitconfig: .gitconfig
+  ~/.vim/bundle/Vundle.vim: vim/bundle/Vundle.vim

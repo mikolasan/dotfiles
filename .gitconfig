@@ -1,10 +1,6 @@
 [user]
 	email = neupokoev.n@gmail.com
 	name = Nikolay Neupokoev
-[push]
-	default = simple
-[alias]
-	logg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [core]
 	autocrlf = input
 	safecrlf = false
@@ -14,3 +10,9 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
+[push]
+	default = simple
+[pull]
+	rebase = false
+[alias]
+	logg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
