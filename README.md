@@ -4,14 +4,25 @@
 
 Get your new system ready
 
+**Ubuntu**
 ```
 sudo apt-get install --assume-yes git curl
+```
+
+**openSUSE**
+```
+sudo zypper install --no-confirm git curl
+```
+
+**Arch**
+```
+sudo pacman -S --noconfirm git curl
 ```
 
 Clone the repository and init submodules
 
 ```
-git clone git@github.com:mikolasan/dotfiles.git ~/dotfiles
+git clone https://github.com/mikolasan/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 git submodule update --init
 ```
@@ -29,11 +40,7 @@ Then create symlinks
 bonclay sync bonclay.conf.yaml
 ```
 
-And follow commands from `install-ubuntu.sh` or run then all at once
-
-```
-bash install-ubuntu.sh
-```
+And follow commands from `install-<DISTRO>.sh` or run them all at once
 
 ## TODO
 
