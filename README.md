@@ -1,5 +1,7 @@
 # mikolasan's dotfiles
 
+![Demo tmux, fuzzy search, vim theme and ranger file manager](screenshot_1.png)
+
 ## How to
 
 Get your new system ready
