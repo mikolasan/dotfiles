@@ -46,4 +46,5 @@ And follow commands from `install-<DISTRO>.sh` or run them all at once
 
 ## TODO
 
-- Prepare similar install script for arch/manjaro
+- Save VS Code / Atom settings here
+
