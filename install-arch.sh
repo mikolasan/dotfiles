@@ -3,6 +3,7 @@
 
 # You will need this
 sudo pacman -S --noconfirm \
+  python-pip \
   powerline \
   powerline-fonts \
   tmux \
@@ -12,8 +13,6 @@ sudo pacman -S --noconfirm \
   ranger \
   yay \
   alacritty
-
-pip3 install --user powerline-status
 
 vim +PluginInstall +qall
 ./fzf/install

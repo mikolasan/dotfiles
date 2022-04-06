@@ -36,6 +36,11 @@ function start_agent {
 
 # Source SSH settings, if applicable
 
+if [ ! -d "$HOME/.ssh" ]; then
+	mkdir "$HOME/.ssh"
+	chmod 700 "$HOME/.ssh"
+fi
+
 if [ -f "${SSH_ENV}" ]; then
 	. "${SSH_ENV}" > /dev/null
 	ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
