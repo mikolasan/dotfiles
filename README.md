@@ -44,7 +44,8 @@ bonclay sync bonclay.conf.yaml
 
 And follow commands from `install-<DISTRO>.sh` or run them all at once
 
-## TODO
+## Windows
 
-- Save VS Code / Atom settings here
-
+- **Alacritty**: copy `Windows\alacritty.yml` to `%APPDATA%\alacritty\alacritty.yml`
+- **Git**: copy `Windows\git-prompt.sh` to `C:\Program Files\Git\etc\profile.d\git-prompt.sh`
+- **VS Code**: copy `Windows\settings.json` to `C:\Users\neupo\AppData\Roaming\Code\User\settings.json`
