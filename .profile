@@ -11,6 +11,9 @@
 GVFS_DISABLE_FUSE=1
 export GVFS_DISABLE_FUSE
 
+JAVA_HOME=/usr/lib/jvm/java-18-openjdk/
+export JAVA_HOME
+
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/.local/bin" ]; then
 	PATH="$HOME/.local/bin:$PATH"

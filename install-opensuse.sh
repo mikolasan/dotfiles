@@ -13,7 +13,7 @@ sudo zypper install --no-confirm \
   zsh \
   python3-pip
 
-pip3 install --user ranger-fm powerline-status thefuck
+pip3 install --user ranger-fm powerline-status
 
 vim +PluginInstall +qall
 ./fzf/install # n, y, y

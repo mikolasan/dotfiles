@@ -9,10 +9,13 @@ sudo pacman -S --noconfirm \
   tmux \
   vim \
   zsh \
-  thefuck \
   ranger \
   yay \
-  alacritty
+  alacritty \
+  tk \
+  meld \
+  nmap
+
 
 vim +PluginInstall +qall
 ./fzf/install
