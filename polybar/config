@@ -211,7 +211,7 @@ ramp-used-padding = 2
 
 [module/pkg]
 type = custom/script
-exec = /home/mikolasan/.config/polybar/updates.sh
+exec = /home/nikolay/.config/polybar/updates.sh
 format-background = ${color.shade7}
 format-padding = 2
 tail = true
@@ -404,18 +404,4 @@ menu-0-1-background = ${color.shade1}
 menu-0-1-exec = systemctl -i poweroff
 
 ;== EOF ========================================================
-adding = 2
-label-background = ${color.shade3}
-time =  %I:%M %p
-time-alt =  %Y-%m-%d
 
-[module/powermenu]
-type = custom/text
-content = 襤
-content-padding = 2
-content-background = ${color.shade2}
-content-foreground = ${color.fg}
-click-left = pmenu_1
-click-right = pmenu_1
-
-;== EOF ========================================================

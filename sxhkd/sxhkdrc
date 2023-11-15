@@ -7,7 +7,7 @@ XF86MonBrightness{Down,Up}
 
 # terminal emulator
 super + Return
-    gnome-terminal
+    alacritty
 #	urxvt
 
 # program launcher

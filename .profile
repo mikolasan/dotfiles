@@ -11,8 +11,11 @@
 GVFS_DISABLE_FUSE=1
 export GVFS_DISABLE_FUSE
 
-JAVA_HOME=/usr/lib/jvm/java-18-openjdk/
+JAVA_HOME=/usr/lib/jvm/java-11-openjdk/
 export JAVA_HOME
+
+GOPATH="$HOME/.go"
+export GOPATH
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/.local/bin" ]; then
@@ -61,8 +64,16 @@ if [ -n "$BASH_VERSION" ]; then
 	fi
 fi
 
-export PATH=$PATH:$HOME/.bar
-if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
-  exec startx
-fi
+export PATH=$PATH:$HOME/.bar:$GOPATH/bin
+
+#if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
+#  exec startx
+#fi
+
+
+# >>> coursier install directory >>>
+export PATH="$PATH:/home/nikolay/.local/share/coursier/bin:/home/nikolay/.dotnet/tools"
+# <<< coursier install directory <<<
+
+[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
 
