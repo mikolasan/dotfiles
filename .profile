@@ -70,10 +70,5 @@ export PATH=$PATH:$HOME/.bar:$GOPATH/bin
 #  exec startx
 #fi
 
-
-# >>> coursier install directory >>>
-export PATH="$PATH:/home/nikolay/.local/share/coursier/bin:/home/nikolay/.dotnet/tools"
-# <<< coursier install directory <<<
-
 [ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
 
