@@ -1,0 +1,31 @@
+working_directory = 'C:\Users\neupo\'
+
+[colors.primary]
+background = "#000000"
+foreground = "#eaeaea"
+
+[font]
+size = 13.0
+
+[font.normal]
+family = "Source Code Pro"
+style = "Medium"
+
+[selection]
+save_to_clipboard = true
+
+[shell]
+args = ['/k "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat"']
+program = "cmd.exe"
+
+[window]
+decorations = "full"
+opacity = 0.9
+
+[window.dimensions]
+columns = 120
+lines = 30
+
+[window.padding]
+x = 5
+y = 5
