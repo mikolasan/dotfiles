@@ -26,4 +26,4 @@ spec:
   ~/.fehbg: .fehbg
   ~/.xinitrc: .xinitrc
   ~/.gitconfig: .gitconfig
-  ~/.alacritty.yml: .alacritty.yml
+  ~/.alacritty.toml: .alacritty.toml

@@ -1,6 +1,10 @@
-[colors.primary]
-background = "#000000"
-foreground = "#eaeaea"
+import = [
+    "~/dotfiles/alacritty/themes/themes/seashells.toml",
+]
+
+#[colors.primary]
+#background = "#000000"
+#foreground = "#eaeaea"
 
 [window]
 decorations = "none"
@@ -9,3 +13,4 @@ opacity = 0.9
 [window.padding]
 x = 5
 y = 5
+
