@@ -64,6 +64,7 @@ ZSH_THEME="mgutz"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  tmux
   zsh-autosuggestions
 )
 
@@ -73,6 +74,7 @@ source $ZSH/oh-my-zsh.sh
 autoload -U colors && colors
 [ -n "$RANGER_LEVEL" ] && PS1="%{$fg_bold[green]%}ranger:$RANGER_LEVEL|%{$reset_color%}$PS1"
 
+ZSH_TMUX_FIXTERM_WITH_256COLOR="tmux-256color"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 

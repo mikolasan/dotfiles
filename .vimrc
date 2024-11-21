@@ -21,7 +21,6 @@ Plugin 'haya14busa/incsearch-fuzzy.vim'
 Plugin 'haya14busa/incsearch-easymotion.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'flazz/vim-colorschemes'
-Plugin 'calviken/vim-gdscript3'
 Plugin 'tpope/vim-surround'
 
 " All of your Plugins must be added before the following line
@@ -42,7 +41,8 @@ filetype plugin indent on    " required
 syntax enable
 set number
 set relativenumber
-colorscheme gruvbox
+"colorscheme gruvbox
+colorscheme falcon
 set background=dark
 set t_Co=256
 
