@@ -1,6 +1,6 @@
 # TUI Guide
 
-- tmux ("window" manager)
+- [zellij](https://zellij.dev/), tmux ("window" manager) 
 - lazygit (git)
 - btop (system monitor)
 - ranger (file manager)
