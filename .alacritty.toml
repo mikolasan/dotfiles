@@ -1,16 +1,19 @@
+[general]
 import = [
-    "~/dotfiles/alacritty/themes/themes/seashells.toml",
+    "~/dotfiles/alacritty/themes/themes/terafox.toml",
 ]
-
-#[colors.primary]
-#background = "#000000"
-#foreground = "#eaeaea"
 
 [window]
 decorations = "none"
-opacity = 0.9
+opacity = 0.92
+dynamic_title = false
+startup_mode =  "Maximized"
 
 [window.padding]
 x = 5
 y = 5
 
+[keyboard]
+bindings = [ 
+  { key = "F", mods = "Control|Shift", mode = "~Search", action = "ReceiveChar" },
+]
