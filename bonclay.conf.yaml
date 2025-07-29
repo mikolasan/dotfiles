@@ -27,3 +27,5 @@ spec:
   ~/.xinitrc: .xinitrc
   ~/.gitconfig: .gitconfig
   ~/.alacritty.toml: .alacritty.toml
+  ~/.config/lvim: lvim
+  ~/.config/zellij: zellij
