@@ -32,3 +32,6 @@ Also: https://mastodon.social/@dan_nanni/113215097780847008
 - learn by example (many examples) https://learnbyexample.github.io/vim_reference/Visual-mode.html
 - visual mode is tricky but cool https://learnvim.irian.to/basics/visual_mode
 
+### My cheat sheet
+
+- **Jump to the function definition** using `Ctrl`-`]`. `Ctrl`+`o` to go back; `Ctrl`+`i` to go forward. If everything is contained in one file, there's the command `gd` (as in 'goto definition')
