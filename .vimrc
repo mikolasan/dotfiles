@@ -41,9 +41,9 @@ filetype plugin indent on    " required
 syntax enable
 set number
 set relativenumber
-"colorscheme gruvbox
-colorscheme falcon
 set background=dark
+colorscheme nordisk
+"colorscheme falcon
 set t_Co=256
 
 " NERDTree

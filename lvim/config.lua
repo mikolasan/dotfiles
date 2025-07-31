@@ -35,6 +35,7 @@ lvim.builtin.which_key.mappings["T"] = {
   r = { "<cmd>OverseerRun<CR>", "Run" },
 }
 
+local dap = require("dap")
 vim.keymap.set('n', '<F5>', function() require('dap').continue() end)
 vim.keymap.set('n', '<F10>', function() require('dap').step_over() end)
 vim.keymap.set('n', '<F11>', function() require('dap').step_into() end)
@@ -120,10 +121,18 @@ lvim.plugins = {
   },
   {
     "j-hui/fidget.nvim",
+    lazy = true,
+    commit = "d0095a157201f85a0b2e537e9dcf4101f1e66040",
     config = function()
       require("fidget").setup()
     end,
   },
+  -- Python
+  "ChristianChiarulli/swenv.nvim",
+  "stevearc/dressing.nvim",
+  "mfussenegger/nvim-dap-python",
+
+  "mxsdev/nvim-dap-vscode-js",
 }
 
 require('overseer').setup({
@@ -335,3 +344,29 @@ lvim.builtin.which_key.mappings["C"] = {
   D = { "<cmd>lua require'crates'.show_dependencies_popup()<cr>", "[crates] show dependencies" },
 }
 
+-----------
+-- Python
+-----------
+
+-- setup formatting
+local formatters = require "lvim.lsp.null-ls.formatters"
+formatters.setup { { name = "black" }, }
+lvim.format_on_save.enabled = true
+lvim.format_on_save.pattern = { "*.py" }
+
+-- setup linting
+local linters = require "lvim.lsp.null-ls.linters"
+linters.setup { { command = "flake8", filetypes = { "python" } } }
+
+-- setup debug adapter
+lvim.builtin.dap.active = true
+local mason_path = vim.fn.glob(vim.fn.stdpath "data" .. "/mason/")
+pcall(function()
+  require("dap-python").setup(mason_path .. "packages/debugpy/venv/bin/python")
+end)
+
+-- binding for switching
+lvim.builtin.which_key.mappings["C"] = {
+  name = "Python",
+  c = { "<cmd>lua require('swenv.api').pick_venv()<cr>", "Choose Env" },
+}
