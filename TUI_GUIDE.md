@@ -35,6 +35,8 @@ Also: https://mastodon.social/@dan_nanni/113215097780847008
 ## vim
 
 - lunar vim https://www.lunarvim.org/docs/configuration/keybindings
+- lunar vim starter configurations (c++, go, latex, rust, python) https://github.com/LunarVim/starter.lvim?tab=readme-ov-file
+- awesome neovim https://github.com/rockerBOO/awesome-neovim#colorscheme
 - cheat sheet https://vim.rtorr.com/
 - learn by example (many examples) https://learnbyexample.github.io/vim_reference/Visual-mode.html
 - visual mode is tricky but cool https://learnvim.irian.to/basics/visual_mode
