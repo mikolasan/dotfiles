@@ -1,0 +1,18 @@
+[servers.multiversesocial]
+server = "irc.multiversesocial.com"
+port = 6667
+use_tls = false
+nickname = "nick"
+channels = ["#general"]
+
+[servers.freenode]
+nickname = "mikolasan"
+server = "irc.freenode.net"
+
+[servers.liberachat]
+nickname = "mikolasan"
+server = "irc.libera.chat"
+channels = ["#halloy"]
+
+[buffer.channel.topic]
+enabled = true
