@@ -4,7 +4,8 @@
 -- Forum: https://www.reddit.com/r/lunarvim/
 -- Discord: https://discord.com/invite/Xb9B4Ny
 
-lvim.lazy.opts.lockfile = nil
+lvim.colorscheme = 'catppuccin-macchiato'
+-- lvim.lazy.opts.lockfile = nil
 
 vim.g.maplocalleader = '\\'
 
@@ -29,11 +30,13 @@ lvim.builtin.which_key.mappings["t"] = {
   h = { "<cmd>2ToggleTerm size=30 direction=horizontal<cr>", "Split horizontal" },
 }
 
-lvim.builtin.which_key.mappings["T"] = {
-  name = "+Tasks (overseer)",
+lvim.builtin.which_key.mappings["O"] = {
+  name = "+Overseer",
+  l = { "<cmd>OverseerLoadBundle<CR>", "Load" },
   t = { "<cmd>OverseerToggle<CR>", "Toggle" },
   r = { "<cmd>OverseerRun<CR>", "Run" },
 }
+lvim.keys.normal_mode["<leader>o"] = "<cmd>OverseerToggle<CR>"
 
 local dap = require("dap")
 vim.keymap.set('n', '<F5>', function() require('dap').continue() end)
@@ -44,10 +47,17 @@ vim.keymap.set('n', '<F12>', function() require('dap').step_out() end)
 -- bufferline
 vim.keymap.set("n", "<C-h>", ":BufferLineCyclePrev<CR>")
 vim.keymap.set("n", "<C-l>", ":BufferLineCycleNext<CR>")
-vim.keymap.set("n", "<leader><tab>d", ":bd<CR>")
-vim.keymap.set("n", "<leader><tab>p", ":BufferLinePick<CR>")
+-- vim.keymap.set("n", "<leader><tab>d", ":bd<CR>")
+-- vim.keymap.set("n", "<leader><tab>p", ":BufferLinePick<CR>") -- already mapped to <leader>bj
 
--- GO
+require('overseer').setup({
+  dap = false,
+  task_list = {
+    direction = 'right',
+    max_width = { 300, 0.4 },
+  },  
+})
+
 
 ------------------------
 -- Treesitter
@@ -58,6 +68,18 @@ lvim.builtin.treesitter.ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 
 -- Plugins
 ------------------------
 lvim.plugins = {
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  {
+    "navarasu/onedark.nvim",
+    priority = 1000, -- make sure to load this before all the other start plugins
+    config = function()
+      require('onedark').setup {
+        style = 'warm'
+      }
+      -- Enable theme
+      require('onedark').load()
+    end
+  },
   {
     'stevearc/overseer.nvim',
     opts = {},
@@ -77,7 +99,10 @@ lvim.plugins = {
     end,
   },
   "mg979/vim-visual-multi",
---  "olexsmir/gopher.nvim",
+  {
+    "olexsmir/gopher.nvim",
+    version = "0.2.2",
+  },
 
   "hashivim/vim-terraform",
   "leoluz/nvim-dap-go",
@@ -132,12 +157,8 @@ lvim.plugins = {
   "stevearc/dressing.nvim",
   "mfussenegger/nvim-dap-python",
 
-  "mxsdev/nvim-dap-vscode-js",
+  -- "mxsdev/nvim-dap-vscode-js",
 }
-
-require('overseer').setup({
-  dap = false,
-})
 
 ------------------------
 -- Formatting
@@ -152,6 +173,16 @@ lvim.format_on_save = {
   enabled = true,
   pattern = { "*.go" },
 }
+
+require("gopher").setup {
+  commands = {
+    go = "go",
+    gomodifytags = "gomodifytags",
+    gotests = "gotests",
+    impl = "impl",
+    iferr = "iferr",
+  }
+};
 
 ------------------------
 -- Dap
@@ -212,21 +243,8 @@ lsp_manager.setup("gopls", {
   },
 })
 
--- local status_ok, gopher = pcall(require, "gopher")
--- if not status_ok then
---   return
--- end
--- 
--- gopher.setup {
---   commands = {
---     go = "go",
---     gomodifytags = "gomodifytags",
---     gotests = "gotests",
---     impl = "impl",
---     iferr = "iferr",
---   },
--- }
--- 
+
+
 -----------
 -- Rust
 -----------
